@@ -1,3 +1,6 @@
 class User:
-    def __init__(self, name):
-        self.name = name
+    """
+    User class for storing user details
+    """
+    def __init__(self, id):
+        self.id = id
