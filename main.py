@@ -8,6 +8,7 @@ if __name__ == '__main__':
     slotBookingObj.add_user(User("Nikhil"))
     slotBookingObj.add_user(User("Ravi"))
     slotBookingObj.add_user(User("Suman"))
+    slotBookingObj.add_user(User("Abc"))
 
     time30MinsBefore = time_minutes_before(30)
     time60MinsBefore = time_minutes_before(60)
@@ -19,3 +20,11 @@ if __name__ == '__main__':
     print (slotBookingObj.book_class('class_1', "Ravi"))
     print (slotBookingObj.book_class('class_1', "Suman"))
     print (slotBookingObj.cancel_class('class_1', "Nikhil"))
+    print (slotBookingObj.book_class('class_1', "Abc"))
+
+    print (slotBookingObj.book_class('class_2', "Abc"))
+    print (slotBookingObj.book_class('class_2', "Nikhil"))
+    print (slotBookingObj.book_class('class_2', "Suman"))
+    print (slotBookingObj.cancel_class('class_2', "Nikhil"))
+
+
