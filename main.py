@@ -9,7 +9,7 @@ if __name__ == '__main__':
     slotBookingObj.add_user(User("Ravi"))
     slotBookingObj.add_user(User("Suman"))
 
-    time30MinsBefore = time_minutes_before(31)
+    time30MinsBefore = time_minutes_before(30)
     time60MinsBefore = time_minutes_before(60)
     slotBookingObj.add_class(FitnessClass("class_1", 2, ClassTypes.YOGA, time30MinsBefore))
     slotBookingObj.add_class(FitnessClass("class_2", 1, ClassTypes.GYM, time60MinsBefore))
@@ -19,4 +19,3 @@ if __name__ == '__main__':
     print (slotBookingObj.book_class('class_1', "Ravi"))
     print (slotBookingObj.book_class('class_1', "Suman"))
     print (slotBookingObj.cancel_class('class_1', "Nikhil"))
-

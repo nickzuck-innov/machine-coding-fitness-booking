@@ -63,6 +63,8 @@ class FitnessSlotBooking:
 
     def assign_waiting_user(self, class_id):
         waitingUserIdx = self.find_waiting_user_idx(class_id)
+        if waitingUserIdx is None:
+            return None
         classUserAssoc = self.waitListUsers.pop(waitingUserIdx)
         return self.book_class(classUserAssoc.class_id, classUserAssoc.user_id)
 
@@ -88,4 +90,7 @@ class FitnessSlotBooking:
         print (f"Class {class_id} cancelled for user {user_id}")
 
         # Assing the slot to the waiting user
-        return self.assign_waiting_user(class_id)
+        assignedTo = self.assign_waiting_user(class_id)
+        if assignedTo is None:
+            return ""
+        return assignedTo
